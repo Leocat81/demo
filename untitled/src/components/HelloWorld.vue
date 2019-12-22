@@ -8,7 +8,7 @@ export default {
   name: 'HelloWorld',
   data () {
     return {
-      msg: 'Welcome to Y'
+      msg: 'W'
     }
   },
   methods: {
