@@ -37,7 +37,9 @@ const webpackConfig = merge(baseWebpackConfig, {
     new UglifyJsPlugin({
       uglifyOptions: {
         compress: {
-          warnings: false
+          warnings: false,
+          drop_console: true,
+          drop_debugger: true
         }
       },
       sourceMap: config.build.productionSourceMap,
@@ -122,7 +124,7 @@ const webpackConfig = merge(baseWebpackConfig, {
     ])
   ]
 })
-
+// 如需使用Gzip请注意 compression-webpack-plugin和webpack版本问题，建议使用compression-webpack-plugin1.1.12版本
 if (config.build.productionGzip) {
   const CompressionWebpackPlugin = require('compression-webpack-plugin')
 

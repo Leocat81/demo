@@ -1,6 +1,8 @@
 <template>
   <div class="hello">
-         {{msg}} </div>
+         {{msg}}
+         <button @click.once="test">点击我</button>
+ </div>
 </template>
 
 <script>
@@ -8,12 +10,16 @@ export default {
   name: 'HelloWorld',
   data () {
     return {
-      msg: 'Welcome'
+      msg: 'sdsds'
     }
   },
   methods: {
     test () {
-
+      console.log(typeof this.msg)
+      this.msg = '里面的'
+    },
+    test1 () {
+      this.msg = '外面的'
     }
   }
 }
